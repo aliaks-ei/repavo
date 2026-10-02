@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  /* Body text built for reading at a glance between sets. */
+  --font-sans: 'Atkinson Hyperlegible Next', ui-sans-serif, system-ui, sans-serif;
+  /* Condensed display face for loads, reps and headings, like a gym scoreboard. */
+  --font-display: 'Big Shoulders', 'Arial Narrow', sans-serif;
+
+  /* Competition-plate blue. */
+  --color-plate-50: #EEF3FF;
+  --color-plate-100: #DCE6FE;
+  --color-plate-200: #B9CCFD;
+  --color-plate-300: #8AA9F9;
+  --color-plate-400: #5A82F1;
+  --color-plate-500: #3463E0;
+  --color-plate-600: #1F4CC9;
+  --color-plate-700: #1A3DA3;
+  --color-plate-800: #193584;
+  --color-plate-900: #192F69;
+  --color-plate-950: #111D40;
+
+  /* Plate yellow marks the set you are on. */
+  --color-marker: #F2C230;
+}
+
+:root {
+  --ui-bg: #E7EBEF;
+  --ui-bg-muted: #DCE2E8;
+  --ui-bg-elevated: #F6F8FA;
+  --ui-bg-accented: #CFD7DF;
+  --ui-text: #17202E;
+  --ui-text-highlighted: #0E1522;
+  --ui-text-muted: #556274;
+  --ui-text-dimmed: #6B7787;
+  --ui-border: #CBD3DC;
+  --ui-border-muted: #D8DEE5;
+  --ui-radius: 0.5rem;
+  /* Darker status colours so small status text passes contrast on the light surface. */
+  --ui-warning: var(--ui-color-warning-700);
+  --ui-success: var(--ui-color-success-700);
+  --ui-error: var(--ui-color-error-600);
+}
+
+.dark {
+  --ui-bg: #1A2029;
+  --ui-bg-muted: #222A35;
+  --ui-bg-elevated: #26303C;
+  --ui-bg-accented: #313C4A;
+  --ui-text: #E6EBF1;
+  --ui-text-highlighted: #FFFFFF;
+  --ui-text-muted: #A3AFBF;
+  --ui-text-dimmed: #8A97A8;
+  --ui-border: #344050;
+  --ui-border-muted: #2B3542;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  background: var(--ui-bg);
+}
+
+body {
+  overscroll-behavior-y: none;
+}
+
+.num {
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+/* Remove number spinners; entry uses the phone keypad. */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom), 0.75rem);
+}
+.pt-safe {
+  padding-top: max(env(safe-area-inset-top), 0.75rem);
+}

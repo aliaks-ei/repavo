@@ -1,0 +1,33 @@
+{
+  "name": "repavo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "test": "node --test shared/training.test.ts",
+    "deploy": "nuxt build && wrangler deploy"
+  },
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.138",
+    "@nuxt/ui": "^4.11.3",
+    "@supabase/supabase-js": "^2.109.0",
+    "@unovis/ts": "^1.7.1",
+    "@unovis/vue": "^1.7.1",
+    "@vite-pwa/nuxt": "^1.1.1",
+    "idb-keyval": "^6.3.0",
+    "motion-v": "^2.5.1",
+    "nuxt": "^4.5.2",
+    "openai": "^7.27.0",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.1",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.12",
+    "wrangler": "^4.86.0"
+  }
+}
